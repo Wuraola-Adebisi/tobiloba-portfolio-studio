@@ -1,0 +1,51 @@
+export default {
+  name: 'siteSettings',
+  title: 'Site Settings',
+  type: 'document',
+  fields: [
+    {name: 'name', type: 'string'},
+    {name: 'portrait', type: 'image', title: 'Hero Portrait'},
+    {name: 'softwareRoleLabel', type: 'string', title: 'Software Role Label'},
+    {name: 'dataRoleLabel', type: 'string', title: 'Data Role Label'},
+    {
+      name: 'softwareAboutBio',
+      type: 'text',
+      title: 'About Bio (Software)',
+      rows: 4,
+      description: 'First-person About paragraph shown on the Software route.',
+    },
+    {
+      name: 'dataAboutBio',
+      type: 'text',
+      title: 'About Bio (Data)',
+      rows: 4,
+      description: 'First-person About paragraph shown on the Data route.',
+    },
+    {
+      name: 'aboutPersonalDetail',
+      type: 'text',
+      title: 'About — Personal Detail',
+      rows: 2,
+      description:
+        'One non-work detail (hobby, interest, side project). Shared across both routes, not role-specific.',
+    },
+    {name: 'softwareResume', type: 'file', title: 'Software Resume (PDF)'},
+    {name: 'dataResume', type: 'file', title: 'Data Resume (PDF)'},
+    {
+      name: 'softwareContactHeadline',
+      type: 'string',
+      title: 'Contact Headline (Software)',
+      description: 'Line shown above the email in the Contact section on the Software route.',
+    },
+    {
+      name: 'dataContactHeadline',
+      type: 'string',
+      title: 'Contact Headline (Data)',
+      description: 'Line shown above the email in the Contact section on the Data route.',
+    },
+    {name: 'contactEmail', type: 'string'},
+    {name: 'githubUrl', type: 'url', title: 'GitHub URL'},
+    {name: 'linkedinUrl', type: 'url', title: 'LinkedIn URL'},
+    {name: 'xUrl', type: 'url', title: 'X / Twitter URL'},
+  ],
+}
