@@ -57,7 +57,7 @@ export default {
       type: "text",
       rows: 8,
       description:
-        "Describe what the role involved and the results it produced. Press Enter twice to start a new paragraph. Avoid the long dash (—). Use a comma or a full stop instead.",
+        "Write the opening paragraph summarising the role. Keep bullet points in Key Contributions. Avoid the long dash (—). Use a comma or a full stop instead.",
       validation: (rule: Rule) =>
         rule
           .custom((value) =>
@@ -66,6 +66,14 @@ export default {
               : true,
           )
           .warning(),
+    },
+    {
+      name: "keyContributions",
+      title: "Key Contributions",
+      type: "array",
+      description:
+        "Add each responsibility, achievement, or contribution as a separate bullet point.",
+      of: [{ type: "string" }],
     },
   ],
 };
